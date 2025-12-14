@@ -1,0 +1,18 @@
+# Build artifacts
+/build
+*.o
+*.elf
+*.hex
+*.bin
+
+# Segger Embedded Studio
+*.emProject
+*.emSession
+*.emSettings
+
+# nRF SDK
+firmware/sdk/
+
+# OS files
+.DS_Store
+Thumbs.db
