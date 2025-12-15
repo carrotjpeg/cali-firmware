@@ -1,0 +1,26 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/firmware",
+                "${workspaceFolder}/firmware/sdk",
+                "${workspaceFolder}/firmware/sdk/modules",
+                "${workspaceFolder}/firmware/sdk/modules/nrfx",
+                "${workspaceFolder}/firmware/sdk/modules/nrfx/drivers",
+                "${workspaceFolder}/firmware/sdk/modules/nrfx/drivers/include",
+                "${workspaceFolder}/firmware/sdk/modules/nrfx/hal",
+                "${workspaceFolder}/firmware/sdk/modules/nrfx/mdk",
+                "${workspaceFolder}/firmware/sdk/components",
+                "${workspaceFolder}/firmware/sdk/components/libraries/util"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ]
+        }
+    ],
+    "version": 4
+}
