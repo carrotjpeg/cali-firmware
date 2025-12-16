@@ -9,6 +9,7 @@ public:
 
     bool init();
     bool readRaw(int16_t &raw_temp);
+    bool readTemperatureC(float &temp_c);
 
 private:
     uint8_t address;

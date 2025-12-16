@@ -1,16 +1,17 @@
-#include "../drivers/tmp117/tmp117.h"
 #include "../drivers/common/i2c_bus.h"
+#include "../drivers/common/uart_log.h"
+#include "../drivers/tmp117/tmp117.h"
 
-int main()
-{
+int main() {
     i2c_init();
+    uart_log_init();
 
     TMP117 temp;
+    float temp_c = 0.0f;
 
-    int16_t raw_temp = 0;
-
-    while (1)
-    {
-        temp.readRaw(raw_temp);
+    while (1) {
+        if (temp.readTemperatureC(temp_c)) {
+            uart_log_printf("TMP117: %.2f C\n", temp_c);
+        }
     }
 }

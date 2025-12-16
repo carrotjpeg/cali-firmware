@@ -30,3 +30,16 @@ bool TMP117::readRaw(int16_t &raw_temp)
     raw_temp = (data[0] << 8) | data[1];
     return true;
 }
+
+bool TMP117::readTemperatureC(float &temp_c)
+{
+    int16_t raw = 0;
+
+    if (!readRaw(raw))
+    {
+        return false;
+    }
+
+    temp_c = raw * 0.0078125f;
+    return true;
+}
